@@ -1,10 +1,15 @@
 const express = require('express')
+
+//importar la funcion para conectar con la BD
+const{conectarBD}=require('../database/conexion.js')
+
 class ServidorModelo{
 
     constructor(){
         
-        this.app = express()
-        this.enrutarPeticiones()
+        this.app = express();
+        this.enrutarPeticiones();
+        this.despertarBD();
 
     }
 
@@ -37,7 +42,8 @@ class ServidorModelo{
     }
 
     despertarBD(){
-
+        
+        conectarBD()
     }
 
 
