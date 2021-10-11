@@ -5,23 +5,31 @@ const{Router}= require('express')
 
 const rutas=Router()
 
-//listado de rutas para
+//importar los controladores de
 
-rutas.get('/avanzada/v1/jugadores', function (req, res) {
-    res.send('Estoy procesando un GET () buscar')
-  })
+const {registrarJugador}= require('../controllers/controladores.js')
+const {buscarJugador}= require('../controllers/controladores.js')
+const {buscarJugadores}= require('../controllers/controladores.js')
+const {editarJugador}= require('../controllers/controladores.js')
+const {eliminarJugador}= require('../controllers/controladores.js')
+
+
+//listado de rutas 
+
+
+rutas.get('/avanzada/v1/jugadores',buscarJugadores) 
+
+
+rutas.get('/avanzada/v1/jugadores/id',buscarJugador) 
   
-rutas.post('/avanzada/v1/jugadores', function (req, res) {
-      res.send('Estoy procesando un POST () insertar')
-  })
-  
-rutas.put('/avanzada/v1/jugadores', function (req, res) {
-      res.send('Estoy procesando un PUT () editando')
-  })
-  
-rutas.delete('/avanzada/v1/jugadores', function (req, res) {
-      res.send('Estoy procesando un DELETE () eliminar')
-  })
+
+rutas.post('/avanzada/v1/jugadores',registrarJugador) 
+
+
+rutas.put('/avanzada/v1/jugadores/id',editarJugador)
+
+
+rutas.delete('/avanzada/v1/jugadores/id',eliminarJugador) 
 
   //exportar las rutas
 
