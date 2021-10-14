@@ -13,7 +13,7 @@ class ServidorModelo{
         
         this.app = express();
         this.enrutarPeticiones();
-        this.despertarBD();
+        //this.despertarBD();
 
     }
 
