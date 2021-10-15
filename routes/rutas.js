@@ -19,17 +19,13 @@ const {eliminarJugador}= require('../controllers/controladores.js')
 
 rutas.get('/avanzada/v1/jugadores',buscarJugadores) 
 
-
-rutas.get('/avanzada/v1/jugadores/id',buscarJugador) 
-  
+rutas.get('/avanzada/v1/jugadores/:id',buscarJugador) 
 
 rutas.post('/avanzada/v1/jugadores',registrarJugador) 
 
+rutas.put('/avanzada/v1/jugadores/:id',editarJugador)
 
-rutas.put('/avanzada/v1/jugadores/id',editarJugador)
-
-
-rutas.delete('/avanzada/v1/jugadores/id',eliminarJugador) 
+rutas.delete('/avanzada/v1/jugadores/:id',eliminarJugador) 
 
   //exportar las rutas
 

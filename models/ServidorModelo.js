@@ -11,9 +11,10 @@ class ServidorModelo{
 
     constructor(){
         
-        this.app = express();
-        this.enrutarPeticiones();
-        //this.despertarBD();
+        this.app = express()
+        //this.despertarBD()
+        this.llamarAuxiliares()
+        this.enrutarPeticiones()
 
     }
 
@@ -36,8 +37,13 @@ class ServidorModelo{
         conectarBD()
     }
 
-
-
+    llamarAuxiliares()
+    {
+        this.app.use(express.json())
+    }
 }
+
+
+
 
 module.exports =ServidorModelo
