@@ -1,7 +1,9 @@
 //se importan utilidades de mongoose
+
 const { model, Schema } = require('mongoose')
 
 //creamos el esquema de datos
+
 const JugadorModelo = Schema({
 
     nombre: {
