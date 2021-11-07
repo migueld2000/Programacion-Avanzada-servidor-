@@ -42,8 +42,4 @@ class ServidorModelo{
         this.app.use(express.json())
     }
 }
-
-
-
-
 module.exports =ServidorModelo

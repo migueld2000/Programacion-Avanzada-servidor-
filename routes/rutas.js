@@ -13,9 +13,7 @@ const {buscarJugadores}= require('../controllers/controladores.js')
 const {editarJugador}= require('../controllers/controladores.js')
 const {eliminarJugador}= require('../controllers/controladores.js')
 
-
 //listado de rutas 
-
 
 rutas.get('/avanzada/v1/jugadores',buscarJugadores) 
 

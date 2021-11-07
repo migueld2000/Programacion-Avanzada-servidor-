@@ -3,11 +3,11 @@
 //importaciones de express
 const {request, response}= require('express')
 
-const { insertarJugador }=require('../services/servicioJugadores.js')
-const { leerJugador }=require('../services/servicioJugadores.js')
-const { leerJugadores }=require('../services/servicioJugadores.js')
-const { borrarJugador }=require('../services/servicioJugadores.js')
-const { modificarJugador }=require('../services/servicioJugadores.js')
+const { insertarJugador }= require ('../services/servicioJugadores.js')
+const { leerJugador }= require ('../services/servicioJugadores.js')
+const { leerJugadores }= require ('../services/servicioJugadores.js')
+const { borrarJugador }= require ('../services/servicioJugadores.js')
+const { modificarJugador }= require ('../services/servicioJugadores.js')
 
 //crear un funcion para cada operacion del servidor
 
